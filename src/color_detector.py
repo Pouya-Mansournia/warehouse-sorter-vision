@@ -1,4 +1,4 @@
-from typing import List, Tuple
+from typing import List, Optional, Tuple
 
 import cv2
 import numpy as np
@@ -14,7 +14,7 @@ class ColorDetector:
         max_area: float,
         min_aspect_ratio: float,
         max_aspect_ratio: float,
-        roi_polygon: List[Tuple[float, float]] = None,
+        roi_polygon: Optional[List[Tuple[float, float]]] = None,
     ):
         self.lower = np.array(hsv_lower, dtype=np.uint8)
         self.upper = np.array(hsv_upper, dtype=np.uint8)

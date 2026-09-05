@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Dict, List
+from typing import Dict, List, Optional
 
 from .tracker import Track
 
@@ -46,7 +46,7 @@ class Counters:
             )
         )
 
-    def finalize_unclassified(self, track: Track, frame_id: int, avg_confidence: float) -> str:
+    def finalize_unclassified(self, track: Track, frame_id: int, avg_confidence: float) -> Optional[str]:
         if track.route_counted:
             return None
         route = track.route or "UNCLASSIFIED"

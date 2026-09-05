@@ -69,7 +69,7 @@ def play_straight():
     _play_async([(1200, 150), (1200, 150)])
 
 
-def play_for_route(route: str):
+def play_for_route(route):
     if route == "LEFT":
         play_left()
     elif route == "STRAIGHT":
