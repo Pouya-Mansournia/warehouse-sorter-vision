@@ -1,0 +1,73 @@
+video:
+  input: data/input.mp4
+detector:
+  type: hsv
+hsv:
+  lower:
+  - 35
+  - 60
+  - 40
+  upper:
+  - 85
+  - 255
+  - 255
+filters:
+  min_area: 10000
+  max_area: 150000
+  min_aspect_ratio: 0.3
+  max_aspect_ratio: 3.0
+tracking:
+  max_missing_frames: 30
+  max_assignment_distance: 150
+zones:
+  tolerance_percent: 10
+  roi:
+  - - 16
+    - 493
+  - - 806
+    - 229
+  - - 905
+    - 256
+  - - 785
+    - 352
+  - - 992
+    - 403
+  - - 924
+    - 678
+  - - 210
+    - 680
+  entry:
+  - - 721
+    - 260
+  - - 779
+    - 292
+  - - 849
+    - 254
+  - - 817
+    - 221
+  left_exit:
+  - - 805
+    - 373
+  - - 636
+    - 583
+  - - 936
+    - 663
+  - - 990
+    - 402
+  straight_exit:
+  - - 199
+    - 453
+  - - 341
+    - 541
+  - - 94
+    - 680
+  - - 3
+    - 536
+output:
+  save_video: true
+  save_csv: true
+  save_json: true
+  debug: false
+  out_dir: outputs
+  enable_sound: true
+  show_zones: false
